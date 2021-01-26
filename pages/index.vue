@@ -22,7 +22,7 @@ export default {
       .then((res) => ({
         events: res.data,
       }))
-      .catch((e) => {
+      .catch(() => {
         error({
           statusCode: 503,
           message: 'Unable to fetch events at this time. Please try again.',
