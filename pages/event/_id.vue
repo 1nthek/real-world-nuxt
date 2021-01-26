@@ -10,12 +10,13 @@ import Vue from 'vue'
 export default Vue.extend({
   head() {
     return {
-      title: 'Event #' + this.id,
+      title: 'Event #' + this.$route.params.id,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'What you need to know about event #' + this.id,
+          content:
+            'What you need to know about event #' + this.$route.params.id,
         },
       ],
     }
